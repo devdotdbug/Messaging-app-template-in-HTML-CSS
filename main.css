@@ -1,0 +1,687 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+* { scroll-behavior: smooth; }
+.layout {
+    width: 95%;
+    height: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 8px;
+    background-color: blueviolet;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.3);
+    position: relative;
+    padding: 8px 2px;
+}
+.layout > .col {
+    float: left;
+}
+.layout > .left {
+    background-color: inherit;
+    height: 100%;
+    width: 5%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    /* border-right: 1px solid #ddd; */
+}
+.layout > .left .back-arrow {
+    color: #fff;
+    font-size: 1em;
+    padding: 25px 25px;
+    display: inline-block;
+}
+.layout > .left .ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.layout > .left .ul li {
+    padding: 30px 15px;
+    margin: 0;
+}
+.layout > .left .ul li a {
+    color: #fff;
+}
+.layout > .middle {
+    box-sizing: border-box;
+    background-color: #f0f3f5;
+    width: 70%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.layout > .middle > .col {
+    float: left;
+    box-sizing: border-box;
+}
+.layout > .middle > .left {
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 50px rgba(0,0,0,0.1); */
+}
+.layout > .middle > .left > .top {
+    background-color: #fff;
+    padding: 8px;
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.1);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0;
+}
+.layout > .middle > .left > .top > .new {
+    background-color: inherit;
+    border: none;
+    outline: 1px dotted #000;
+    outline-offset: 1px;
+    padding: 5px;
+    display: block;
+    box-shadow: 0px 0px 18px rgba(0,0,0,0.2);
+    margin: 8px;
+    border-radius: 18px;
+    width: 90%;
+    box-sizing: border-box;
+}
+.layout > .middle > .left > .top > .new .plus {
+    background-color: #f0f2f5;
+    padding: 5px;
+    border-radius: 50%;
+    float: left;
+    color: #2193f3;
+    font-size: large;
+}
+.layout > .middle > .left > .top > .new:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.2);
+}
+.layout > .middle > .left > .top > .new .text {
+    text-align: center;
+    display: inline-block;
+    padding: 8px 0px;
+}
+.layout > .middle > .left > .top h2 .dots {
+    font-size: medium;
+    color: #606060;
+    text-align: right;
+    float: right;
+    padding: 8px;
+    cursor: pointer;
+}
+.layout > .middle > .left > .top .search {
+    background-color: #ddddff;
+    border-radius: 15px;
+}
+.layout > .middle > .left > .top .search input[type=text] {
+    border: none;
+    background-color: inherit;
+    padding: 8px 15px;
+}
+.layout > .middle > .left > .top .search input[type=text]:focus {
+    border: none;
+    background-color: inherit;
+    outline: none;
+}
+.layout > .middle > .left > .top .search .bi {
+    color: #000;
+    font-size: medium;
+}
+.layout > .middle > .left > .bottom {
+    background-color: inherit;
+    padding: 8px 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 70%;
+    overflow: visible;
+}
+.layout > .middle > .left > .bottom > ul { 
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-top: -8px;
+    overflow: visible;
+}
+.layout > .middle > .left > .bottom > ul li {
+    padding: 8px 4px;
+    margin: 0px 0px;
+    border-bottom: 1px solid #ddd;
+    border-left: 2px solid transparent;
+    background-color: #fff;
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.1);
+} 
+.layout > .middle > .left > .bottom > ul .active {
+    background-color: inherit;
+    border-bottom: 1px solid transparent;
+    border-left: 2px solid #e91e63;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+}
+.layout > .middle > .left > .bottom > ul .nextElementSibling {
+    border-top-right-radius: 15px;
+}
+.layout > .middle > .left > .bottom > ul .previousElementSibling {
+    border-bottom-right-radius: 15px;
+}
+.layout > .middle > .left > .bottom > ul li:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.layout > .middle > .left > .bottom > ul li:first-child {
+    border-bottom: none;
+}
+.layout > .middle > .left > .bottom > ul li .user {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+} 
+.layout > .middle > .left > .bottom > ul li .user .icon {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.layout > .middle > .left > .bottom > ul li .user .icon .online {
+    display: inline-block;
+    padding: 5px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    right: 8px;
+}
+.layout > .middle > .left > .bottom > ul li .user .icon .offline {
+    display: inline-block;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+.layout > .middle > .left > .bottom > ul li .user .icon img {
+    border-radius: initial;
+    height: auto;
+}
+.layout > .middle > .left > .bottom > ul li .user > .span {
+    display: block;
+    width: 80%;
+    float: right;
+    text-align: left;
+    color: #1c1e12;
+}
+.layout > .middle > .left > .bottom > ul li .user > span .time {
+    color: #505050;
+}
+
+
+
+
+
+
+
+.layout > .middle > .right {
+    box-sizing: border-box;
+    width: 65%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 50px rgba(0,0,0,0.1); */
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.layout > .middle > .right > .top {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: inherit;
+    max-height: 10%;
+}
+.layout > .middle > .right > .top .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+.layout > .middle > .right > .top img {
+    height: auto;
+    image-rendering: pixelated;
+}
+.layout > .middle > .right > .top .username {
+    text-decoration: none;
+    font-size: large;
+    color: #1c1e21;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.layout > .middle > .right > .top .span {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: small;
+}
+.layout > .middle > .right > .top .dots {
+    float: right;
+    font-size: x-large;
+    color: #1c1e21;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 0px 0px 8px 0px;
+    display: inline-block;
+}
+
+.layout > .middle > .right > .middle {
+    height: 85%;
+    overflow-y: auto;
+}
+.layout > .middle > .right > .middle .message:first-child {
+    margin-top: 15px;
+}
+.layout > .middle > .right > .middle .message {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-content: space-between;
+    align-items: flex-end;
+}
+.layout > .middle > .right > .middle .message:last-child {
+    margin-bottom: 25px;
+}
+.layout > .middle > .right > .middle .message .icon {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    margin: 8px 3px 0px 2px;
+}
+.layout > .middle > .right > .middle .message .icon {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+.layout > .middle > .right > .middle .message .icon img {
+    height: auto;
+}
+.layout > .middle > .right > .middle .message div .chat {
+    background-color: #fff;
+    color: #1c1e21;
+    padding: 8px;
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+}
+.layout > .middle > .right > .middle .message div .chat .time {
+    display: block;
+    text-align: right;
+}
+.layout > .middle > .right > .middle .message div .chat .image-wrap {
+    border-radius: 8px;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block
+}
+.layout > .middle > .right > .middle .message div .left-chat {
+    border-radius: 18px 18px 18px 0px;
+    /* float: left; */
+}
+.layout > .middle > .right > .middle .message div .right-chat {
+    border-radius: 18px 18px 0px 18px;
+    background-color: #ddddff;
+    /* float: right; */
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.0);
+    float: right;
+}
+
+
+.layout > .middle > .right > .bottom {
+    color: #1c1e12;
+    background-color: #fff;
+    padding: 8px;
+    height: 5%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+.layout > .middle > .right > .bottom > .left {
+    width: 10%;
+    float: left;
+    text-align: left;
+}
+.layout > .middle > .right > .bottom > .left .new {
+    background-color: transparent;
+    border: none;
+    background-color: #ddddff;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.layout > .middle > .right > .bottom > .middle {
+    width: 70%;
+    float: left;
+    text-align: center;
+}
+
+.layout > .middle > .right > .bottom > .middle textarea {
+    border: none;
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 5px;
+}
+.layout > .middle > .right > .bottom > .middle textarea:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+}
+.layout > .middle > .right > .bottom > .right {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+.layout > .middle > .right > .bottom > .right .send {
+    background-color: transparent;
+    border: none;
+    background-color: #ddddff;
+    padding: 8px;
+    border-radius: 50%;
+    color: #1c1e21;
+}
+.layout > .middle > .right > .bottom > .right .send:hover {
+    background-color: #ccccff;
+    cursor: pointer;
+}
+
+
+.layout > .right {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 23%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 15px;
+    overflow-y: auto;
+}
+.layout > .right > .top {
+    width: 100%;
+    background-color: inherit;
+    text-align: center;
+}
+.layout > .right > .top .favicon-wrap {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 10px 10px 50px rgba(0,0,0,0.2);
+}
+.layout > .right > .top .favicon-wrap .iner-wrap {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.layout > .right > .top .username {
+    color: #1c1e12;
+    font-size: larger;
+    text-align: inherit;
+    padding: 15px 0px 0px 0px;
+    margin: 0;
+}
+.layout > .right > .top .gender {
+    font-size: small;
+    color: #505050;
+    text-align: inherit;
+}
+.layout > .right > .middle {
+    width: 100%;
+}
+.layout > .right > .middle > .ul { 
+    list-style-type: none;
+    padding: 0;
+    margin: 25px 0px;
+}
+.layout > .right > .middle > .ul li {
+    padding: 0;
+    margin: 0;
+    background-color: #ddddff;
+    padding: 15px 2px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.layout > .right > .middle > .ul li button {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: inherit;
+}
+.layout > .right > .middle > .ul li button .bi {
+    color: slateblue;
+    font-size: larger;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: left;
+}
+.layout > .right > .middle > .ul li.videos {
+    background-color: rgb(236, 190, 236);
+}
+.layout > .right > .middle > .ul li.pdfs {
+    background-color: #ffdddd;
+}
+.layout > .right > .middle > .ul li.audios {
+    background-color: #ddffdd;
+}
+.layout > .right > .middle > .ul li.videos button .bi {
+    color:  #f44336;
+}
+.layout > .right > .middle > .ul li.pdfs button .bi {
+    color:  rgb(119, 23, 23);
+}
+.layout > .right > .middle > .ul li.audios button .bi {
+    color: #4CAF50;
+}
+.layout > .right > .middle > .ul li button .text {
+    text-align: center;
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: small;
+    font-weight: bold;
+}
+.layout > .right > .middle > .ul li button .arrow {
+    color: #1c1e12;
+    font-size: larger;
+    background-color: transparent;
+    padding: 1px;
+    border-radius: 50%;
+    text-align: right;
+    float: right;
+}
+.layout > .right > .middle > .ul li.videos button .arrow,
+.layout > .right > .middle > .ul li.pdfs button .arrow,
+.layout > .right > .middle > .ul li.audios button .arrow {
+    color: #1c1e12;
+}
+
+.layout > .right > .middle > .ul .files-map { 
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
+    display: none;
+    transition: 0.3s;
+}
+.layout > .right > .middle > .ul li .files-map li {
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    padding: 15px 2px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 15px;
+    cursor: default;
+    padding-left: 15px;
+}
+.layout > .right > .middle > .ul li .files-map li:first-child {
+    border-top: 1px solid #909090;
+    margin-top: 15px;
+}
+
+.layout > .right > .middle > .ul li button {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: inherit;
+}
+.layout > .right > .middle > .ul li .files-map li button .text {
+    text-align: center;
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.layout > .right > .middle > .ul li .files-map li button .bi-download {
+    cursor: pointer;
+}
+
+/* .layout > .right > .middle > .ul { 
+    list-style-type: none;
+    padding: 0;
+    margin: 8px 0px;
+}
+.layout > .right > .middle > .ul li {
+    padding: 0;
+    margin: 0;
+    background-color: #ddddff;
+    padding: 15px 2px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.layout > .right > .middle > .ul li:first-child {
+    border-radius: 8px 8px 0px 0px;
+}
+.layout > .right > .middle > .ul li:last-child {
+    border-radius: 0px 0px 8px 8px;
+}
+.layout > .right > .middle > .ul li button {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: inherit;
+}
+.layout > .right > .middle > .ul li button .bi {
+    color: slateblue;
+    font-size: larger;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: left;
+}
+.layout > .right > .middle > .ul li button .text {
+    text-align: center;
+    display: inline-block;
+    padding: 2px 8px;
+}
+.layout > .right > .middle > .ul li button .arrow {
+    color: #1c1e12;
+    font-size: larger;
+    background-color: transparent;
+    padding: 1px;
+    border-radius: 50%;
+    text-align: right;
+    float: right;
+} */
+
+
+
+
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #f8f8f8;
+        box-shadow: inset 0 0 2px grey;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #6a5acd;
+        border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(71, 54, 179);
+    }
+.view-image-overay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+.view-image-overay > .viewed-image {
+    width: 50%;
+    height: 90%;
+    background-color: slateblue;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 5vh;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px rgb(123, 112, 196);
+    padding-top: 5%;
+    position: relative;
+}
+.view-image-overay > .viewed-image > .inner {
+    background-color: #fff;
+    width: 100%;
+    height: 95%;
+    border-radius: 30px;
+}
+.view-image-overay > .viewed-image > .inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+.view-image-overay > .viewed-image > .close {
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: xx-large;
+    cursor: pointer;
+}
+

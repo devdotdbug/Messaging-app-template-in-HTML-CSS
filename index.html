@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>mosesinc template</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='@i/bootstrap-icons.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="layout">
+        <div class="col left">
+            <a href="#" class="back-arrow"><i class="bi bi-arrow-left"></i></a>
+            <ul class="ul">
+                <li><a href="#"><i class="bi bi-file"></i></a></li>
+                <li><a href="#"><i class="bi bi-clock"></i></a></li>
+                <li><a href="#"><i class="bi bi-chat"></i></a></li>
+                <li><a href="#"><i class="bi bi-bell"></i></a></li>
+                <li><a href="#"><i class="bi bi-person"></i></a></li>
+                <li><a href="#"><i class="bi bi-gear"></i></a></li>
+            </ul>
+        </div>
+        <div class="col middle">
+            <div class="col left">
+                <div class="top">
+                    <button class="new">
+                        <span class="plus"><i class="bi bi-plus"></i></span>
+                        <span class="text">Create New</span>
+                    </button>
+                    <h2>Chat <span class="dots">...</span></h2>
+                    <div class="search">
+                        <form>
+                            <input type="text" placeholder="Search Name">
+                            <i class="bi bi-search"></i>
+                        </form>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <ul class="ul">
+                        <li class="userLi"></li>
+                        <li class="userLi" onclick="activeElementInUsers(this)">
+                            <a href="#" class="user">
+                                <span class="icon">
+                                    <img src="img/0.png" alt="Image" width="40" height="40">
+                                    <span class="online"></span>
+                                </span>
+                                <span class="span">
+                                    <span>Username</span><br>
+                                    <small class="time">active</small>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="userLi" onclick="activeElementInUsers(this)">
+                            <a href="#" class="user">
+                                <span class="icon">
+                                    <img src="img/1.png" alt="Image" width="40" height="40">
+                                    <span class="online"></span>
+                                </span>
+                                <span class="span">
+                                    <span>Username</span><br>
+                                    <small class="time">active</small>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="userLi" onclick="activeElementInUsers(this)">
+                            <a href="#" class="user">
+                                <span class="icon">
+                                    <img src="img/4.png" alt="Image" width="40" height="40">
+                                    <span class="offline"></span>
+                                </span>
+                                <span class="span">
+                                    <span>Username</span><br>
+                                    <small class="time">Yesterday</small>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="userLi" onclick="activeElementInUsers(this)">
+                            <a href="#" class="user">
+                                <span class="icon">
+                                    <img src="img/2.png" alt="Image" width="40" height="40">
+                                    <span class="offline"></span>
+                                </span>
+                                <span class="span">
+                                    <span>Username</span><br>
+                                    <small class="time">1 hour ago</small>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="userLi" onclick="activeElementInUsers(this)">
+                            <a href="#" class="user">
+                                <span class="icon">
+                                    <img src="img/3.png" alt="Image" width="40" height="40">
+                                    <span class="offline"></span>
+                                </span>
+                                <span class="span">
+                                    <span>Username</span><br>
+                                    <small class="time">3 hour ago</small>
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col right">
+
+                <div class="top">
+                    <span class="icon">
+                        <img src="img/4.png" alt="Image" width="40" height="40">
+                    </span>
+                    <a href="#" class="username">
+                        <span>Username</span><br>
+                    </a>
+                    <span class="span">
+                        <small class="time">Yesterday</small>
+                    </span>
+                </div>
+                
+                <div class="middle" id="chatDisplay">
+
+                    <div class="message left">
+                        <span class="icon left-icon">
+                            <img src="img/4.png" alt="Image" width="40" height="40">
+                        </span>
+                        <div style="width: 90%">
+                            <p class="chat left-chat">
+                                <span class="text">
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                </span>
+                                <small class="time"><time>1:52pm</time></small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="message right">
+                        <div style="width: 90%">
+                            <p class="chat right-chat">
+                                <span class="text">
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                </span>
+                                <small class="time"><time>1:52pm</time></small>
+                            </p>
+                        </div>
+                        <span class="icon right-icon">
+                            <img src="img/5.png" alt="Image" width="40" height="40">
+                        </span>
+                    </div>
+                    <div class="message left">
+                        <span class="icon left-icon">
+                            <img src="img/4.png" alt="Image" width="40" height="40">
+                        </span>
+                        <div style="width: 90%">
+                            <p class="chat left-chat">
+                                <span class="text">
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                </span>
+                                <small class="time"><time>1:52pm</time></small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="message right">
+                        <div style="width: 90%">
+                            <p class="chat right-chat">
+                                <span class="text">
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                </span>
+                                <small class="time"><time>1:52pm</time></small>
+                            </p>
+                        </div>
+                        <span class="icon right-icon">
+                            <img src="img/5.png" alt="Image" width="40" height="40">
+                        </span>
+                    </div>
+                    <div class="message left">
+                        <span class="icon left-icon">
+                            <img src="img/4.png" alt="Image" width="40" height="40">
+                        </span>
+                        <div style="width: 90%">
+                            <p class="chat left-chat">
+                                <span class="text">
+                                    <span class="image-wrap">
+                                        <img src="img/7.png" alt="Image" width="210" onclick="viewedImage(this)">
+                                    </span>
+                                </span>
+                                <small class="time"><time>1:52pm</time></small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="message right">
+                        <div style="width: 90%">
+                            <p class="chat right-chat">
+                                <span class="text">
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                    Laurem ipsume dolour sit amet
+                                </span>
+                                <small class="time"><time>1:52pm</time></small>
+                            </p>
+                        </div>
+                        <span class="icon right-icon">
+                            <img src="img/5.png" alt="Image" width="40" height="40">
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="bottom">
+                    <div class="left">
+                        <button class="new"><i class="bi bi-plus"></i></button>
+                    </div>
+                    <div class="middle">
+                        <textarea class="text" placeholder="Type a message..."></textarea>
+                    </div>
+                    <div class="right">
+                        <button class="send"><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col right">
+            <div class="top">
+                <span class="favicon-wrap">
+                    <span class="iner-wrap">
+                        <img src="img/5.png" alt="favicon" width="100">
+                    </span>
+                </span>
+                <h3 class="username">Username</h3>
+                <small class="gender"><b>Gender:</b> female</small>
+            </div>
+            <div class="middle">
+                <ul class="ul">
+                    <li class="images" onclick="showFiles(this)">
+                        <button>
+                            <i class="bi bi-file-earmark-image"></i> 
+                            <span class="text">Shared Images</span>
+                            <i class="bi bi-chevron-down arrow"></i> 
+                        </button>
+
+                        <ul class="files-map">
+                            <li>
+                                <button>
+                                    <i class="bi bi-file-earmark"></i> 
+                                    <span class="text">Pretty.jpg</span>
+                                    <i class="bi bi-download arrow"></i> 
+                                </button>                                
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="videos" onclick="showFiles(this)">
+                        <button>
+                            <i class="bi bi-file-earmark-play"></i> 
+                            <span class="text">Shared Videos</span>
+                            <i class="bi bi-chevron-down arrow"></i> 
+                        </button>
+                        <ul class="files-map">
+                            <li>
+                                <button>
+                                    <i class="bi bi-file-earmark"></i> 
+                                    <span class="text">Party.mp4</span>
+                                    <i class="bi bi-download arrow"></i> 
+                                </button>                                
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="pdfs" onclick="showFiles(this)">
+                        <button>
+                            <i class="bi bi-file-earmark-pdf"></i> 
+                            <span class="text">Shared PDFs</span>
+                            <i class="bi bi-chevron-down arrow"></i> 
+                        </button>
+
+                        <ul class="files-map">
+                            <li>
+                                <button>
+                                    <i class="bi bi-file-earmark"></i> 
+                                    <span class="text">Report.pdf</span>
+                                    <i class="bi bi-download arrow"></i> 
+                                </button>                                
+                            </li>
+                            <li>
+                                <button>
+                                    <i class="bi bi-file-earmark"></i> 
+                                    <span class="text">Total.pdf</span>
+                                    <i class="bi bi-download arrow"></i> 
+                                </button>                                
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <li class="audios" onclick="showFiles(this)">
+                        <button>
+                            <i class="bi bi-file-earmark-music"></i> 
+                            <span class="text">Shared Audios</span>
+                            <i class="bi bi-chevron-down arrow"></i> 
+                        </button>
+                        <ul class="files-map">
+                            <li>
+                                <button>
+                                    <i class="bi bi-file-earmark"></i> 
+                                    <span class="text">Don_winlliams.mp3</span>
+                                    <i class="bi bi-download arrow"></i> 
+                                </button>                                
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom"></div>
+        </div>
+
+    </div>
+    <div class="view-image-overay" id="viewedImageOveray" style="display: none;">
+        <div class="viewed-image">
+            <span onclick="this.parentElement.parentElement.style.display='none'" class="close">&times;</span>
+            <div id="viewedImage" class="inner"></div>
+        </div>
+    <script src='main.js'></script>
+</body>
+</html>
